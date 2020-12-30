@@ -1,5 +1,7 @@
 This is a classic hamburguer menu, with a nice effect appearing and disappearing, and finally a menu with options.
 
+It also has some responsive design features.
+
 Use it free in your web site.
 
 
