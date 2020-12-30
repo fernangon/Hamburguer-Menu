@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Hamburguer</title>
+    <link rel="stylesheet" href="micss.css">
+
+</head>
+    
+<body>
+    
+    <div class="container">
+
+
+        <div class="flex-box"></div>
+        <div class="flex-box"></div>
+        <div class="flex-box"></div>
+
+
+        <!-- Menu -->
+        <div class="menu">
+        
+            <ul class="menu-list">
+                <li class="menu-item">Music</li>
+                <li class="menu-item">Youtube</li>
+                
+                <li class="menu-item dropdown-holder dropdown-holder1">Brave Browser
+                    <div class="hover-box">
+                        <ul class="hover-box-list">
+                            <li class="hover-box-item">BAT 1</li>
+                            <li class="hover-box-item">BAT 2</li>
+                            <li class="hover-box-item">BAT 3</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-item dropdown-holder">Internet
+                    <div class="hover-box">
+                        <ul class="hover-box-list">
+                            <li class="hover-box-item">Email Us</li>
+                            <li class="hover-box-item">Social Medias</li>
+                            <li class="hover-box-item">Link</li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Botón de 3 rayas -->
+        <div class="toggle">
+            <span class="toggle-span"></span>
+            <span class="toggle-span"></span>
+            <span class="toggle-span"></span>
+        </div>
+
+    </div>
+
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" 
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+            crossorigin="anonymous">
+    </script>
+
+
+    <script>
+
+        // Funcionamiento del Menu
+        if($(window).width() > 739) {
+            $(".dropdown-holder").on("mouseenter", function(e) {
+                $(".hover-box", this).slideDown("fast");
+            });
+
+            $(".dropdown-holder").on("mouseleave", function(e) {
+                $(".hover-box", this).slideUp("fast");
+            });
+        }
+
+        // Quitar/Poner clase a la página inicial con foto, cuando se pulsa el botón de 3 rayas
+        document.querySelector(".toggle").addEventListener("click", function() {
+            document.querySelector(".container").classList.toggle("container-open");
+        });
+
+    </script>
+
+    
+
+</body>
+
+
+</html>
+
+
